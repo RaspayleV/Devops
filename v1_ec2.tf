@@ -3,9 +3,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo-server" {
-    ami = "ami-0f5ee92e2d63afc18"
+    ami = "ami-0287a05f0ef0e9d9a"
     instance_type = "t2.micro"
-    key_name = "dpo"
+    key_name = "dpp"
     vpc_security_group_ids = [aws_security_group.demo-sg.id]
     subnet_id = aws_subnet.dpw-public_subnet_01.id
     for_each = toset(["Jenkins-master", "Jenkins-slave", "Ansible"])
